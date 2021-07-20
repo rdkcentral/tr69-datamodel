@@ -142,6 +142,23 @@
         <syntax> <unsignedInt/> </syntax>
       </parameter>
     </object>
+    <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.SWDLSpLimit." access="readOnly" minEntries="1" maxEntries="1" addObjIdx="-1" delObjIdx="-1">
+      <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" rebootIdx="0" initIdx="1" getIdx="18000" setIdx="18001">
+        <syntax>
+          <boolean/>
+        </syntax>
+      </parameter>
+      <parameter base="TopSpeed" access="readWrite" notification="0" maxNotification="2" rebootIdx="0" initIdx="1" getIdx="18000" setIdx="18001">
+        <syntax>
+          <int/>
+        </syntax>
+      </parameter>
+      <parameter base="LowSpeed" access="readWrite" notification="0" maxNotification="2" rebootIdx="0" initIdx="1" getIdx="18000" setIdx="18001">
+        <syntax>
+          <int/>
+        </syntax>
+      </parameter>
+    </object>
     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_xBlueTooth." access="readOnly" minEntries="1" maxEntries="1" addObjIdx="-1" delObjIdx="-1">
       <parameter base="Enabled" access="readOnly" notification="0" maxNotification="2" rebootIdx="0" initIdx="1" getIdx="18000" setIdx="-1">
         <syntax>
