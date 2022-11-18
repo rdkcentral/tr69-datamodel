@@ -28,7 +28,7 @@
       <parameter base="Description" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
           <string/>
-          <default type="factory" value="TR-181, TR-135 and Comcast specific Datamodel Configuration"/>
+          <default type="factory" value="TR-181, TR-135 and RDK specific Datamodel Configuration"/>
         </syntax>
       </parameter>
       <parameter base="ProductClass" access="readOnly" notification="0" maxNotification="2" >
@@ -70,41 +70,6 @@
       <parameter base="FirstUseDate" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
           <dateTime/>
-        </syntax>
-      </parameter>
-      <parameter base="X_COMCAST-COM_STB_MAC" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>
-        </syntax>
-      </parameter>
-      <parameter base="X_COMCAST-COM_STB_IP" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>
-        </syntax>
-      </parameter>
-      <parameter base="X_COMCAST-COM_FirmwareFilename" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>
-        </syntax>
-      </parameter>
-      <parameter base="X_COMCAST-COM_FirmwareToDownload" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>
-        </syntax>
-      </parameter>
-      <parameter base="X_COMCAST-COM_FirmwareDownloadStatus" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>
-        </syntax>
-      </parameter>
-       <parameter base="X_COMCAST-COM_Reset" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>
-        </syntax>
-      </parameter>
-      <parameter base="X_COMCAST-COM_PowerStatus" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>
         </syntax>
       </parameter>
       <parameter base="VendorLogFileNumberOfEntries" access="readOnly" notification="0" maxNotification="2" >
@@ -1987,317 +1952,6 @@
         </syntax>
       </parameter>
     </object>
-	<object base="Device.X_COMCAST-COM_Components." access="readOnly" minEntries="1" maxEntries="unbounded"/>
-	<object base="Device.X_COMCAST-COM_Xcalibur." access="readOnly" minEntries="1" maxEntries="unbounded"/>
-        <object base="Device.X_COMCAST-COM_Xcalibur.Client." access="readOnly" minEntries="1" maxEntries="unbounded">
-      	  <parameter base="xconfCheckNow" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>
-        </syntax>
-      	  </parameter>
-    	</object>
-    <object base="Device.X_COMCAST-COM_Xcalibur.DevApp." access="readWrite" minEntries="1" maxEntries="unbounded">
-      <parameter base="devAppNumAps" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <unsignedInt/>
-        </syntax>
-      </parameter>
-      <parameter base="devAppRestartRequest" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>
-        </syntax>
-      </parameter>
-    </object>
-    <object base="Device.X_COMCAST-COM_Xcalibur.DevApp.devAppTable.{i}." access="readOnly" minEntries="0" maxEntries="unbounded" >
-      <parameter base="devAppId" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>
-        </syntax>
-      </parameter>
-      <parameter base="devAppRestartCapability" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>
-        </syntax>
-      </parameter>
-    </object>
-	<object base="Device.X_COMCAST-COM_Xcalibur.Client.XRE." access="readOnly" minEntries="1" maxEntries="unbounded">
-	  <parameter base="xreEnable" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>
-          <boolean/>          
-        </syntax>
-      </parameter>
-      <parameter base="xreStatus" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>          
-        </syntax>
-      </parameter>
-	  <parameter base="xreVersion" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>          
-        </syntax>
-      </parameter>
-      <parameter base="xreReceiverId" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>          
-        </syntax>
-      </parameter>
-      <parameter base="xreSessionId" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>          
-        </syntax>
-      </parameter>
-      <parameter base="xreSessionLastModTs" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>          
-        </syntax>
-      </parameter>
-      <parameter base="xreSessionUptime" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>          
-        </syntax>
-      </parameter>
-      <parameter base="xreLastURLAccessed" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>          
-        </syntax>
-      </parameter>
-      <parameter base="xreMinCmdProcTime" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <int/>
-        </syntax>
-      </parameter>
-      <parameter base="xreAvgCmdProcTime" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <int/>
-        </syntax>
-      </parameter>
-      <parameter base="xreMaxCmdProcTime" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <int/>
-        </syntax>
-      </parameter>      
-      <parameter base="xreCommandCnt" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <unsignedInt/>          
-        </syntax>
-      </parameter>
-      <parameter base="xreErrorCnt" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <unsignedInt/>          
-        </syntax>
-      </parameter>
-      <parameter base="xreTotViewCnt" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <unsignedInt/>          
-        </syntax>
-      </parameter>
-      <parameter base="xreTotAppCnt" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <unsignedInt/>          
-        </syntax>
-      </parameter>
-      <parameter base="xreTotRectCnt" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <unsignedInt/>          
-        </syntax>
-      </parameter>
-	  <parameter base="xreTotTxtCnt" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <unsignedInt/>          
-        </syntax>
-      </parameter>
-	  <parameter base="xreTotHtmlTxtCnt" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <unsignedInt/>          
-        </syntax>
-      </parameter>
-	  <parameter base="xreTotTxtIpCnt" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <unsignedInt/>          
-        </syntax>
-      </parameter>
-	  <parameter base="xreTotFontCnt" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <unsignedInt/>          
-        </syntax>
-      </parameter>
-	  <parameter base="xreTotVideoCnt" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <unsignedInt/>          
-        </syntax>
-      </parameter>
-	  <parameter base="xreTotSoundCnt" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <unsignedInt/>          
-        </syntax>
-      </parameter>
-      <parameter base="xreTotStyleshtCnt" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <unsignedInt/>          
-        </syntax>
-      </parameter>
-      <parameter base="xreTotImgCnt" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <unsignedInt/>          
-        </syntax>
-      </parameter>
-	  <parameter base="xreTotNineSliceImgCnt" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <unsignedInt/>          
-        </syntax>
-      </parameter>
-	  <parameter base="xreTotFlashCnt" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <unsignedInt/>
-        </syntax>
-      </parameter>
-	  <parameter base="xreTotAnimCnt" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <unsignedInt/>
-        </syntax>
-      </parameter>
-	  <parameter base="xreRefreshXreSession" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>
-          <boolean/>
-        </syntax>
-      </parameter>
-      <parameter base="xreRefreshXreSessionWithRR" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>
-          <int/>
-        </syntax>
-      </parameter>
-      <parameter base="xreRestartXreApp" access="writeOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>
-        </syntax>
-      </parameter>
-	  <parameter base="xreFlushLocalCache" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>
-          <boolean/>          
-        </syntax>
-      </parameter>
-      <parameter base="xreLogLevel" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>          
-        </syntax>
-      </parameter>
-      <parameter base="xreGetTWPDiags" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>          
-        </syntax>
-      </parameter>
-      <parameter base="xreChannelMapId" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>          
-        </syntax>
-      </parameter>
-      <parameter base="xreControllerId" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>          
-        </syntax>
-      </parameter>
-      <parameter base="xrePlantId" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>          
-        </syntax>
-      </parameter>
-      <parameter base="xreVodId" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>          
-        </syntax>
-      </parameter>      
-      <parameter base="xreGatewaySTBMAC" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>          
-        </syntax>
-      </parameter>
-      <parameter base="xreReceiverRestart" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>
-          <boolean/>
-        </syntax>
-      </parameter>
-      <parameter base="xreLastVideoUrl" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>
-        </syntax>
-      </parameter>
-    </object>
-    <object base="Device.X_COMCAST-COM_Xcalibur.Client.XRE.ConnectionTable." access="readOnly" minEntries="1" maxEntries="unbounded">
-      <parameter base="xreAppId" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>          
-        </syntax>
-      </parameter>
-	  <parameter base="xreConnURL" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>          
-        </syntax>
-      </parameter>
-      <parameter base="xreConnStatus" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>          
-        </syntax>
-      </parameter>
-      <parameter base="xreConnIfName" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>          
-        </syntax>
-      </parameter>
-      <parameter base="xreConnEstTs" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>          
-        </syntax>
-      </parameter>
-      <parameter base="xreConnRetryAttempts" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <unsignedInt/>          
-        </syntax>
-      </parameter>
-    </object>
-	<object base="Device.X_COMCAST-COM_Xcalibur.Client.SecuritySystem." access="readOnly" minEntries="1" maxEntries="unbounded">
-      <parameter base="ssRegTs" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <boolean/>          
-        </syntax>
-      </parameter>
-	  <parameter base="ssDeviceId" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>          
-        </syntax>
-      </parameter>
-      <parameter base="ssDeviceReg" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <dateTime/>          
-        </syntax>
-      </parameter>
-      <parameter base="ssErrorCnt" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <unsignedInt/>          
-        </syntax>
-      </parameter>
-    </object>
-    <object base="Device.X_COMCAST-COM_Xcalibur.TRM." access="readOnly" minEntries="1" maxEntries="unbounded">
-      <parameter base="trmGatewaySTBMAC" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>
-        </syntax>
-      </parameter>
-      <parameter base="trmGatewayMoCAIP" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>
-        </syntax>
-      </parameter>
-      <parameter base="trmGatewayMoCAMAC" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>
-        </syntax>
-      </parameter>
-      <parameter base="trmGatewayDeviceFriendlyName" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>
-        </syntax>
-      </parameter>
-    </object>
     <object base="Device.Services." access="readOnly" minEntries="1" maxEntries="unbounded">
       <parameter base="STBServiceNumberOfEntries" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
@@ -2397,11 +2051,6 @@
           <boolean/>
         </syntax>
       </parameter>
-      <parameter base="X_COMCAST-COM_Standby" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>
-          <boolean/>
-        </syntax>
-      </parameter>
       <parameter base="Status" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
           <string/>
@@ -2454,60 +2103,10 @@
           <unsignedInt/>          
         </syntax>
       </parameter>
-      <parameter base="X_COMCAST-COM_AudioOptimalLevel" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>          
-        </syntax>
-      </parameter>
       <parameter base="CancelMute" access="readWrite" notification="0" maxNotification="2" >
         <syntax>
           <boolean/>
           <default type="factory" value="0"/>
-        </syntax>
-      </parameter>
-      <parameter base="X_COMCAST-COM_AudioCompression" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>
-          <unsignedInt/>
-        </syntax>
-      </parameter>
-      <parameter base="X_COMCAST-COM_MinAudioDB" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>          
-        </syntax>
-      </parameter>
-      <parameter base="X_COMCAST-COM_MaxAudioDB" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>          
-        </syntax>
-      </parameter>
-      <parameter base="X_COMCAST-COM_AudioDB" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>          
-        </syntax>
-      </parameter>
-      <parameter base="X_COMCAST-COM_AudioEncoding" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>          
-        </syntax>
-      </parameter>
-      <parameter base="X_COMCAST-COM_AudioGain" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>          
-        </syntax>
-      </parameter>
-      <parameter base="X_COMCAST-COM_AudioStereoMode" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>          
-        </syntax>
-      </parameter>
-      <parameter base="X_COMCAST-COM_AudioLoopThru" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>          
-        </syntax>
-      </parameter>	  
-      <parameter base="X_COMCAST-COM_DialogEnhancement" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>
-          <unsignedInt/>
         </syntax>
       </parameter>
     </object>		
@@ -2584,11 +2183,6 @@
         </syntax>
       </parameter>
       <parameter base="EEDID" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>
-        </syntax>
-      </parameter>
-      <parameter base="X_COMCAST-COM_EDID" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
           <string/>
         </syntax>
@@ -4549,14 +4143,6 @@
       </parameter>
      </object> 
      <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.ThunderProxy.com." access="readOnly" minEntries="0" maxEntries="1" />
-     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.ThunderProxy.com.comcast." access="readOnly" minEntries="0" maxEntries="1" />
-     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.ThunderProxy.com.comcast.stateObserver." access="readOnly" minEntries="0" maxEntries="1" >
-      <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>                                                                                                                          
-           <boolean/>
-        </syntax>  
-      </parameter>
-     </object> 
      <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.ThunderProxy.org.rdk." access="readOnly" minEntries="0" maxEntries="1" />
      <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.ThunderProxy.org.rdk.DeviceDiagnostics_1." access="readOnly" minEntries="0" maxEntries="1" >
       <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
@@ -4593,13 +4179,6 @@
         </syntax>  
       </parameter>
      </object> 
-     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.ThunderProxy.com.comcast.XreFrameRateService." access="readOnly" minEntries="0" maxEntries="1" >
-      <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>                                                                                                                          
-           <boolean/>
-        </syntax>  
-      </parameter>
-     </object>
      <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.ThunderProxy.org.openrdk.videoApplicationEvents_1." access="readOnly" minEntries="0" maxEntries="1" >
       <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
         <syntax>                                                                                                                          
@@ -4635,34 +4214,6 @@
         </syntax>
       </parameter>
      </object>
-     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.ThunderProxy.com.comcast.application_1." access="readOnly" minEntries="0" maxEntries="1" >
-      <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>                                                                                                                          
-           <boolean/>
-        </syntax>  
-      </parameter>
-     </object>     
-     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.ThunderProxy.com.comcast.hdmiCec_1." access="readOnly" minEntries="0" maxEntries="1" >
-      <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>                                                                                                                          
-           <boolean/>
-        </syntax>  
-      </parameter>
-     </object>     
-     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.ThunderProxy.com.comcast.HDCPProfile." access="readOnly" minEntries="0" maxEntries="1" >
-      <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>                                                                                                                          
-           <boolean/>
-        </syntax>  
-      </parameter>
-     </object>
-     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.ThunderProxy.com.comcast.hdmiInput_1." access="readOnly" minEntries="0" maxEntries="1" >
-      <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>                                                                                                                          
-           <boolean/>
-        </syntax>  
-      </parameter>
-     </object>   
      <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.NonRootSupport." access="readOnly" minEntries="0" maxEntries="1" >
      <parameter base="Blocklist" access="readWrite" notification="0" maxNotification="2" >
        <syntax>
@@ -4731,21 +4282,7 @@
         </syntax>  
       </parameter>
      </object>
-     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.ThunderProxy.com.comcast.xcast_1." access="readOnly" minEntries="0" maxEntries="1" >
-      <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>                                                                                                                          
-           <boolean/>
-        </syntax>  
-      </parameter>
-     </object>
      <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.ThunderProxy.FrontPanelService." access="readOnly" minEntries="0" maxEntries="1" >
-      <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>                                                                                                                          
-           <boolean/>
-        </syntax>  
-      </parameter>
-     </object>
-     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.ThunderProxy.com.comcast.deviceProvisioning_1." access="readOnly" minEntries="0" maxEntries="1" >
       <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
         <syntax>                                                                                                                          
            <boolean/>
