@@ -8,7 +8,7 @@
           <default type="factory" value="0"/>
         </syntax>
       </parameter>
-    </object>    
+    </object>
     <object base="Device.DeviceInfo." access="readOnly" minEntries="1" maxEntries="1" >
       <parameter base="Manufacturer" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
@@ -34,7 +34,7 @@
       <parameter base="ProductClass" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
           <string/>
-          <default type="factory" value="XI6"/>
+          <default type="factory" value="IPSTB"/>
         </syntax>
       </parameter>
       <parameter base="SerialNumber" access="readOnly" notification="0" maxNotification="2" >
@@ -76,7 +76,7 @@
         <syntax>
           <unsignedInt/>
         </syntax>
-      </parameter>      
+      </parameter>
       <parameter base="SupportedDataModelNumberOfEntries" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
           <unsignedInt/>
@@ -165,7 +165,7 @@
         <syntax>
           <boolean/>
         </syntax>
-      </parameter>	  
+      </parameter>
     </object>
     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_xBlueTooth.DiscoveredDevice.{i}." access="readOnly" minEntries="0" maxEntries="unbounded" >
       <parameter base="Name" access="readOnly" notification="0" maxNotification="2" >
@@ -298,7 +298,7 @@
           <string/>
         </syntax>
       </parameter>
-    </object>	 
+    </object>
     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.SDCARD_SCRATCHPAD." access="readOnly" minEntries="0" maxEntries="1" >
      <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
        <syntax>
@@ -339,23 +339,15 @@
        </syntax>
      </parameter>
     </object>
+    <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.USB_HID." access="readOnly" minEntries="0" maxEntries="1" >
+      <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
+        <syntax>
+           <boolean/>
+        </syntax>
+      </parameter>
+     </object>
      <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.LXC." access="readOnly" minEntries="0" maxEntries="1" />
      <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.LXC.Netflix." access="readOnly" minEntries="0" maxEntries="1" >
-       <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>
-           <boolean/>
-        </syntax>
-       </parameter>
-      </object>
-     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.LXC.XRE." access="readOnly" minEntries="0" maxEntries="1" >
-       <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>
-           <boolean/>
-        </syntax>
-       </parameter>
-      </object>
-     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.Dobby." access="readOnly" minEntries="0" maxEntries="1" />
-     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.Dobby.Netflix." access="readOnly" minEntries="0" maxEntries="1" >
        <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
         <syntax>
            <boolean/>
@@ -489,7 +481,7 @@
         </parameter>
     </object>
     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.HDMICECDaemon." minEntries="0" maxEntries="1" >
-        <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
+        <parameter base="Enable" bsUpdate="allUpdate" access="readWrite" notification="0" maxNotification="2" >
             <syntax>
                 <boolean/>
             </syntax>
@@ -509,14 +501,14 @@
           </syntax>
         </parameter>
     </object>
-   <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.XRRemoteAsLinuxDevice." access="readOnly" minEntries="0" maxEntries="1" >
+    <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.XRRemoteAsLinuxDevice." access="readOnly" minEntries="0" maxEntries="1" >
        <parameter base="Enable" access="writeOnly" notification="0" maxNotification="2" >
-           <syntax>
-               <boolean/>
-           </syntax>
+          <syntax>
+             <boolean/>
+          </syntax>
        </parameter>
-   </object>
-   <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.DolbyVision." access="readOnly" minEntries="0" maxEntries="1" >
+    </object>
+    <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.DolbyVision." access="readOnly" minEntries="0" maxEntries="1" >
        <parameter base="Enable" access="writeOnly" notification="0" maxNotification="2" >
            <syntax>
                <boolean/>
@@ -592,14 +584,6 @@
         </syntax>
        </parameter>
     </object>
-    <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.BTR.GamePad." access="readOnly" minEntries="1" maxEntries="1" >
-      <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>
-          <boolean/>
-          <default type="factory" value="false"/>
-        </syntax>
-      </parameter>
-    </object>
     <object base="Device.DeviceInfo.SupportedDataModel." access="readOnly" minEntries="1" maxEntries="unbounded"/>
     <object base="Device.DeviceInfo.SupportedDataModel.1." access="readOnly" minEntries="1" maxEntries="1" >
       <parameter base="URL" access="readOnly" notification="0" maxNotification="2" >
@@ -645,8 +629,8 @@
         <syntax>
           <unsignedInt/>
         </syntax>
-      </parameter>      
-    </object>        
+      </parameter>
+    </object>
     <object base="Device.DeviceInfo.ProcessStatus." access="readOnly" minEntries="1" maxEntries="unbounded" >
       <parameter base="CPUUsage" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
@@ -657,8 +641,8 @@
         <syntax>
           <unsignedInt/>
         </syntax>
-      </parameter>      
-    </object>      
+      </parameter>
+    </object>
  	<object base="Device.DeviceInfo.ProcessStatus.Process.{i}." access="readOnly" minEntries="0" maxEntries="unbounded" >
       <parameter base="PID" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
@@ -684,20 +668,20 @@
         <syntax>
           <unsignedInt/>
         </syntax>
-      </parameter> 	
+      </parameter>
       <parameter base="State" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
           <string/>
         </syntax>
       </parameter>
-    </object>   
+    </object>
     <object base="Device.DeviceInfo.Processor.{i}." access="readOnly" minEntries="0" maxEntries="unbounded" >
       <parameter base="Architecture" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
           <string/>
         </syntax>
       </parameter>
-    </object> 
+    </object>
      <object base="Device.DeviceInfo.X_RDKCENTRAL-COM." access="readOnly" minEntries="0" maxEntries="unbounded" >
       <parameter base="BootStatus" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
@@ -727,7 +711,7 @@
         </syntax>
       </parameter>
     </object>
-    <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_xOpsDeviceMgmt." access="readOnly" minEntries="1" maxEntries="unbounded"/> 
+    <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_xOpsDeviceMgmt." access="readOnly" minEntries="1" maxEntries="unbounded"/>
     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_xOpsDeviceMgmt.Logging." access="readOnly" minEntries="0" maxEntries="unbounded" >
       <parameter base="xOpsDMUploadLogsNow" access="writeOnly" notification="0" maxNotification="2" >
         <syntax>
@@ -763,7 +747,7 @@
            <boolean/>
          </syntax>
         </parameter>
-      </object> 
+      </object>
      <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC." access="readOnly" minEntries="1" maxEntries="1"/>
      <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.AppCommander."  access="readOnly" minEntries="0" maxEntries="1" >
       <parameter base="DestroyAppsToClearMem" access="readWrite" notification="0" maxNotification="2" >
@@ -807,7 +791,7 @@
       <parameter base="EnableCWMP" access="readWrite" notification="0" maxNotification="2" >
 	    <syntax>
           <boolean/>
-        </syntax>        
+        </syntax>
       </parameter>
       <parameter base="URL" access="readWrite" notification="0" maxNotification="2" >
         <syntax>
@@ -854,7 +838,7 @@
       <parameter base="ConnectionRequestUsername" access="readWrite" notification="0" maxNotification="2" >
         <syntax>
           <string/>
-        </syntax>      
+        </syntax>
       </parameter>
       <parameter base="ConnectionRequestPassword" access="writeOnly" notification="0" maxNotification="2" >
         <syntax>
@@ -876,7 +860,7 @@
         <syntax>
           <string/>
         </syntax>
-      </parameter>            
+      </parameter>
       <parameter base="DefaultActiveNotificationThrottle" access="readWrite" notification="0" maxNotification="2" >
         <syntax>
           <unsignedInt/>
@@ -892,7 +876,7 @@
         <syntax>
           <unsignedInt/>
         </syntax>
-      </parameter>      
+      </parameter>
       <parameter base="UDPConnectionRequestAddress" access="readOnly" notification="0" maxNotification="3" >
         <syntax>
           <string/>
@@ -960,7 +944,7 @@
           <boolean/>
           <default type="factory" value="0"/>
         </syntax>
-      </parameter>   
+      </parameter>
 	</object>
     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_xOpsDeviceMgmt.hwHealthTest." access="readOnly" minEntries="0" maxEntries="unbounded" >
       <parameter base="ExecuteTest" access="writeOnly" notification="0" maxNotification="2" >
@@ -1001,13 +985,6 @@
         </syntax>
       </parameter>
     </object>
-    <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.hwHealthTestWAN." access="readOnly" minEntries="0" maxEntries="unbounded" >
-      <parameter base="WANTestEndPointURL" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>
-        </syntax>
-      </parameter>
-    </object>
     <object base="Device.InterfaceStack.{i}." access="readOnly" minEntries="0" maxEntries="unbounded" >
       <parameter base="HigherLayer" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
@@ -1019,18 +996,18 @@
           <string/>
         </syntax>
       </parameter>
-    </object>    
+    </object>
 	<object base="Device.Ethernet." access="readOnly" minEntries="1" maxEntries="1" >
       <parameter base="InterfaceNumberOfEntries" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
           <unsignedInt/>
         </syntax>
-      
+
       </parameter>
       <parameter base="LinkNumberOfEntries" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
           <unsignedInt/>
-        </syntax>      
+        </syntax>
       </parameter>
     </object>
     <object base="Device.Ethernet.Interface.{i}." access="readOnly" minEntries="0" maxEntries="unbounded" >
@@ -1068,7 +1045,7 @@
         <syntax>
           <boolean/>
         </syntax>
-      </parameter>      
+      </parameter>
       <parameter base="MACAddress" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
           <string/>
@@ -1085,32 +1062,32 @@
         </syntax>
       </parameter>
     </object>
-    <object base="Device.Ethernet.Interface.{i}.Stats." access="readOnly" minEntries="1" maxEntries="1" > 
+    <object base="Device.Ethernet.Interface.{i}.Stats." access="readOnly" minEntries="1" maxEntries="1" >
 	  <parameter base="BytesSent" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
           <unsignedLong/>
         </syntax>
-      </parameter>      
+      </parameter>
 	  <parameter base="BytesReceived" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
           <unsignedLong/>
         </syntax>
-      </parameter>      
+      </parameter>
 	  <parameter base="PacketsSent" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
           <unsignedLong/>
         </syntax>
-      </parameter>      
+      </parameter>
 	  <parameter base="PacketsReceived" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
           <unsignedLong/>
         </syntax>
-      </parameter>     
+      </parameter>
 	  <parameter base="ErrorsSent" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
           <unsignedInt/>
         </syntax>
-      </parameter>      
+      </parameter>
 	  <parameter base="ErrorsReceived" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
           <unsignedInt/>
@@ -1120,12 +1097,12 @@
         <syntax>
           <unsignedLong/>
         </syntax>
-      </parameter>      
+      </parameter>
 	  <parameter base="UnicastPacketsReceived" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
           <unsignedLong/>
         </syntax>
-      </parameter>      
+      </parameter>
 	  <parameter base="DiscardPacketsSent" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
           <unsignedInt/>
@@ -1135,12 +1112,12 @@
         <syntax>
           <unsignedInt/>
         </syntax>
-      </parameter>      
+      </parameter>
 	  <parameter base="MulticastPacketsSent" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
           <unsignedLong/>
         </syntax>
-      </parameter>      
+      </parameter>
 	  <parameter base="MulticastPacketsReceived" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
           <unsignedLong/>
@@ -1150,7 +1127,7 @@
         <syntax>
           <unsignedLong/>
         </syntax>
-      </parameter>      
+      </parameter>
 	  <parameter base="BroadcastPacketsReceived" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
           <unsignedLong/>
@@ -1161,7 +1138,7 @@
           <unsignedInt/>
         </syntax>
       </parameter>
-    </object>   
+    </object>
  	<object base="Device.Ethernet.Link.{i}." access="readOnly" minEntries="0" maxEntries="unbounded" >
       <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
         <syntax>
@@ -1190,8 +1167,8 @@
         <syntax>
           <string/>
         </syntax>
-      </parameter>      
-    </object>   
+      </parameter>
+    </object>
     <object base="Device.IP." access="readOnly" minEntries="1" maxEntries="1" >
       <parameter base="IPv4Capable" access="readOnly" notification="0" maxNotification="2" >
 	 <syntax>
@@ -1952,6 +1929,7 @@
         </syntax>
       </parameter>
     </object>
+
     <object base="Device.Services." access="readOnly" minEntries="1" maxEntries="unbounded">
       <parameter base="STBServiceNumberOfEntries" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
@@ -2095,12 +2073,12 @@
       </parameter>
       <parameter base="AudioFormat" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
-          <string/>          
+          <string/>
         </syntax>
       </parameter>
       <parameter base="AudioLevel" access="readWrite" notification="0" maxNotification="2" >
         <syntax>
-          <unsignedInt/>          
+          <unsignedInt/>
         </syntax>
       </parameter>
       <parameter base="CancelMute" access="readWrite" notification="0" maxNotification="2" >
@@ -2109,7 +2087,7 @@
           <default type="factory" value="0"/>
         </syntax>
       </parameter>
-    </object>		
+    </object>
     <object base="Device.Services.STBService.1.Components.VideoOutput." access="readOnly" minEntries="1" maxEntries="unbounded"/>
     <object base="Device.Services.STBService.1.Components.VideoOutput.1." access="readOnly" minEntries="1" maxEntries="unbounded">
       <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
@@ -2241,7 +2219,7 @@
         <syntax> <boolean/> </syntax>
       </parameter>
       <parameter base="LifeElapsedB" access="readOnly" notification="0" maxNotification="2" >
-        <syntax> <int/> </syntax> 
+        <syntax> <int/> </syntax>
       </parameter>
       <parameter base="LifeElapsedA" access="readOnly" notification="0" maxNotification="2" >
         <syntax> <int/> </syntax>
@@ -2265,103 +2243,103 @@
     <object base="Device.Services.STBService.1.Components.X_RDKCENTRAL-COM_RF4CE." access="readOnly" minEntries="1" maxEntries="unbounded">
       <parameter base="rf4ceVersionInfo" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
-          <string/>          
+          <string/>
         </syntax>
       </parameter>
       <parameter base="rf4cePANID" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
-          <unsignedInt/>          
+          <unsignedInt/>
         </syntax>
       </parameter>
 	  <parameter base="rf4ceMACAddress" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
-          <string/>          
+          <string/>
         </syntax>
       </parameter>
 	  <parameter base="rf4ceActiveChannel" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
-          <unsignedInt/>          
+          <unsignedInt/>
         </syntax>
       </parameter>
   	  <parameter base="rf4ceNetworkAddress" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
-          <unsignedInt/>          
+          <unsignedInt/>
         </syntax>
       </parameter>
   	  <parameter base="rf4cePairedRemotesNumberOfEntries" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
-          <unsignedInt/>          
+          <unsignedInt/>
         </syntax>
       </parameter>
     </object>
-    <object base="Device.Services.STBService.1.Components.X_RDKCENTRAL-COM_RF4CE.Remote." access="readOnly" minEntries="1" maxEntries="unbounded"/>                                   
+    <object base="Device.Services.STBService.1.Components.X_RDKCENTRAL-COM_RF4CE.Remote." access="readOnly" minEntries="1" maxEntries="unbounded"/>
     <object base="Device.Services.STBService.1.Components.X_RDKCENTRAL-COM_RF4CE.Remote.1." access="readOnly" minEntries="1" maxEntries="1" >
        <parameter base="MACAddress" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
-          <string/>          
+          <string/>
         </syntax>
       </parameter>
 	  <parameter base="VersionInfoSW" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
-          <string/>          
+          <string/>
         </syntax>
-      </parameter>	
+      </parameter>
 	  <parameter base="VersionInfoHW" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
-          <string/>          
+          <string/>
         </syntax>
-      </parameter>	
+      </parameter>
 	  <parameter base="RemoteId" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
           <unsignedInt/>
         </syntax>
-      </parameter>	
+      </parameter>
 	  <parameter base="RemoteType" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
-          <string/>          
+          <string/>
         </syntax>
-      </parameter>	
+      </parameter>
 	  <parameter base="BatteryReplacement" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
-          <boolean/>          
+          <boolean/>
         </syntax>
-      </parameter>	
+      </parameter>
 	  <parameter base="ImpendingDoom" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
-          <boolean/>          
+          <boolean/>
         </syntax>
-      </parameter>	
+      </parameter>
 	  <parameter base="BatteryLevelLoaded" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
           <unsignedInt/>
         </syntax>
-      </parameter>	
+      </parameter>
 	  <parameter base="BatteryLevelUnloaded" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
           <unsignedInt/>
         </syntax>
-      </parameter>	
+      </parameter>
 	  <parameter base="BatteryPercentage" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
           <unsignedInt/>
         </syntax>
-      </parameter>	
+      </parameter>
 	  <parameter base="SignalStrength" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
           <int/>
         </syntax>
-      </parameter>	
+      </parameter>
 	  <parameter base="LinkQuality" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
           <unsignedInt/>
         </syntax>
-      </parameter>	
+      </parameter>
 	  <parameter base="NetworkAddress" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
           <unsignedInt/>
         </syntax>
-      </parameter>	
-    </object>	
+      </parameter>
+    </object>
         <object base="Device.WiFi." access="readOnly" minEntries="1" maxEntries="1" >
       <parameter base="RadioNumberOfEntries" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
@@ -2409,7 +2387,7 @@
         <syntax>
           <string/>
         </syntax>
-      </parameter> 
+      </parameter>
 	  <parameter base="LastChange" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
           <unsignedInt/>
@@ -2526,7 +2504,7 @@
         </syntax>
       </parameter>
     </object>
-    <object base="Device.WiFi.Radio.{i}.Stats." access="readOnly" minEntries="1" maxEntries="1" > 
+    <object base="Device.WiFi.Radio.{i}.Stats." access="readOnly" minEntries="1" maxEntries="1" >
 	  <parameter base="BytesSent" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
           <unsignedLong/>
@@ -2536,7 +2514,7 @@
         <syntax>
           <unsignedLong/>
         </syntax>
-      </parameter> 
+      </parameter>
 	  <parameter base="PacketsSent" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
           <unsignedLong/>
@@ -2551,7 +2529,7 @@
         <syntax>
           <unsignedInt/>
         </syntax>
-      </parameter>      
+      </parameter>
 	  <parameter base="ErrorsReceived" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
           <unsignedInt/>
@@ -2571,7 +2549,7 @@
         <syntax>
           <int/>
         </syntax>
-      </parameter>      
+      </parameter>
     </object>
 	<object base="Device.WiFi.SSID.{i}." access="readOnly" minEntries="0" maxEntries="unbounded" >
       <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
@@ -2594,7 +2572,7 @@
         <syntax>
           <string/>
         </syntax>
-      </parameter> 
+      </parameter>
 	  <parameter base="LastChange" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
           <unsignedInt/>
@@ -2622,12 +2600,12 @@
         </syntax>
       </parameter>
     </object>
-    <object base="Device.WiFi.SSID.{i}.Stats." access="readOnly" minEntries="1" maxEntries="1" > 
+    <object base="Device.WiFi.SSID.{i}.Stats." access="readOnly" minEntries="1" maxEntries="1" >
 	  <parameter base="BytesSent" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
           <unsignedLong/>
         </syntax>
-      </parameter>      
+      </parameter>
 	  <parameter base="BytesReceived" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
           <unsignedLong/>
@@ -2682,22 +2660,22 @@
         <syntax>
           <unsignedLong/>
         </syntax>
-      </parameter>      
+      </parameter>
 	  <parameter base="BroadcastPacketsSent" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
           <unsignedLong/>
         </syntax>
-      </parameter>      
+      </parameter>
 	  <parameter base="BroadcastPacketsReceived" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
           <unsignedLong/>
         </syntax>
-      </parameter>      
+      </parameter>
 	  <parameter base="UnknownProtoPacketsReceived" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
           <unsignedInt/>
         </syntax>
-      </parameter>      
+      </parameter>
     </object>
 	<object base="Device.WiFi.AccessPoint.{i}." access="readOnly" minEntries="0" maxEntries="unbounded" >
       <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
@@ -2727,7 +2705,7 @@
         <syntax>
           <boolean/>
         </syntax>
-      </parameter>      
+      </parameter>
 	  <parameter base="RetryLimit" access="readWrite" notification="0" maxNotification="2" >
         <syntax>
           <unsignedInt/>
@@ -2758,7 +2736,7 @@
           <unsignedInt/>
         </syntax>
       </parameter>
-    </object>      
+    </object>
     <object base="Device.WiFi.AccessPoint.{i}.Security." access="readOnly" minEntries="1" maxEntries="1" >
       <parameter base="ModesSupported" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
@@ -2769,7 +2747,7 @@
         <syntax>
           <string/>
         </syntax>
-      </parameter>      
+      </parameter>
       <parameter base="WEPKey" access="readWrite" notification="0" maxNotification="2" >
         <syntax>
           <hexBinary/>
@@ -2836,7 +2814,7 @@
         <syntax>
           <boolean/>
         </syntax>
-      </parameter>	      
+      </parameter>
 	  <parameter base="LastDataDownlinkRate" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
           <unsignedInt/>
@@ -2846,7 +2824,7 @@
         <syntax>
           <unsignedInt/>
         </syntax>
-      </parameter>            
+      </parameter>
       <parameter base="SignalStrength" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
           <int/>
@@ -2862,7 +2840,7 @@
           <boolean/>
         </syntax>
       </parameter>
-    </object> 
+    </object>
 	<object base="Device.WiFi.EndPoint.{i}." access="readOnly" minEntries="0" maxEntries="unbounded" >
       <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
         <syntax>
@@ -2898,13 +2876,13 @@
           <unsignedInt/>
         </syntax>
       </parameter>
-    </object>      
-    <object base="Device.WiFi.EndPoint.{i}.Stats." access="readOnly" minEntries="1" maxEntries="1" > 
+    </object>
+    <object base="Device.WiFi.EndPoint.{i}.Stats." access="readOnly" minEntries="1" maxEntries="1" >
 	  <parameter base="LastDataDownlinkRate" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
           <unsignedInt/>
         </syntax>
-      </parameter>      
+      </parameter>
 	  <parameter base="LastDataUplinkRate" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
           <unsignedInt/>
@@ -2914,14 +2892,14 @@
         <syntax>
           <int/>
         </syntax>
-      </parameter>      
+      </parameter>
 	  <parameter base="Retransmissions" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
           <unsignedInt/>
           <default type="factory" value="0"/>
         </syntax>
       </parameter>
-    </object>    
+    </object>
     <object base="Device.WiFi.EndPoint.{i}.Security." access="readOnly" minEntries="1" maxEntries="1" >
       <parameter base="ModesSupported" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
@@ -2968,7 +2946,7 @@
           <default type="factory" value="0"/>
         </syntax>
       </parameter>
-    </object>      
+    </object>
     <object base="Device.WiFi.EndPoint.{i}.Profile.{i}.Security." access="readOnly" minEntries="1" maxEntries="1" >
       <parameter base="ModeEnabled" access="readWrite" notification="0" maxNotification="2" >
         <syntax>
@@ -2989,7 +2967,7 @@
         <syntax>
           <string/>
         </syntax>
-      </parameter>                  
+      </parameter>
     </object>
     <object base="Device.WiFi.EndPoint.{i}.WPS." access="readOnly" minEntries="1" maxEntries="1" >
       <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
@@ -3137,6 +3115,13 @@
         </syntax>
       </parameter>
      </object>
+	 <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.EnableHttpCDL." access="readOnly" minEntries="0" maxEntries="1" >
+      <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
+        <syntax>
+           <boolean/>
+        </syntax>
+      </parameter>
+     </object>
 	 <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.TR069support." access="readOnly" minEntries="0" maxEntries="1" >
       <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
         <syntax>
@@ -3242,6 +3227,14 @@
         </syntax>
       </parameter>
      </object>
+     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.BTR.GamePad." access="readOnly" minEntries="1" maxEntries="1" addObjIdx="0" delObjIdx="0">
+       <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" rebootIdx="0" initIdx="1" getIdx="18000" setIdx="18001">
+         <syntax>
+           <boolean/>
+           <default type="factory" value="false"/>
+         </syntax>
+       </parameter>
+     </object>
      <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.BootstrapConfig." access="readOnly" minEntries="0" maxEntries="1" >
      <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
         <syntax>
@@ -3257,13 +3250,6 @@
         </syntax>
       </parameter>
     </object>
-    <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.UPnPxPKI." access="readOnly" minEntries="0" maxEntries="1" >
-      <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>
-          <boolean/>
-        </syntax>
-      </parameter>
-    </object>
     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.XRDsp." access="readOnly" minEntries="1" maxEntries="1"/>
     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.XRDsp.XR19." access="readOnly" minEntries="0" maxEntries="1" >
       <parameter base="Configuration" access="readWrite" notification="0" maxNotification="2" >
@@ -3272,12 +3258,20 @@
         </syntax>
       </parameter>
     </object>
+    <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.MTLS." access="readOnly" minEntries="1" maxEntries="1"/>
+    <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.MTLS.mTlsVA." access="readOnly" minEntries="0" maxEntries="1" >
+      <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
+        <syntax>
+          <boolean/>
+        </syntax>
+      </parameter>
+    </object>
     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.CRL." access="readOnly" minEntries="0" maxEntries="1" >
      <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
         <syntax>
            <boolean/>
         </syntax>
-      </parameter>
+     </parameter>
      <parameter base="DirectOCSP" access="readWrite" notification="0" maxNotification="2" >
         <syntax>
            <boolean/>
@@ -3296,6 +3290,13 @@
         </syntax>
      </parameter>
     </object>
+    <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.NonRootSupport." access="readOnly" minEntries="0" maxEntries="1" >
+      <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
+        <syntax>
+          <boolean/>
+        </syntax>
+      </parameter>
+    </object>
     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.PreferredNetworkInterface." access="readOnly" minEntries="0" maxEntries="1" >
       <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
         <syntax>
@@ -3311,7 +3312,7 @@
         </syntax>
       </parameter>
     </object>
-    <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.1080pGraphics." access="readOnly" minEntries="0" maxEntries="1" >
+    <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.Network.ManualIPSettings." access="readOnly" minEntries="0" maxEntries="1" >
       <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
         <syntax>
           <boolean/>
@@ -3322,9 +3323,16 @@
       <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
         <syntax>
           <boolean/>
-          <default type="factory" value="true"/>
+          <default type="factory" value="false"/>
         </syntax>
       </parameter>
+    </object>
+    <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.1080pGraphics." access="readOnly" minEntries="0" maxEntries="1" >
+     <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
+       <syntax>
+         <boolean/>
+       </syntax>
+     </parameter>
     </object>
     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.LnFUseXPKI." access="readOnly" minEntries="0" maxEntries="1" >
       <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
@@ -3371,6 +3379,13 @@
         </syntax>
       </parameter>
      </object>
+    <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.WiFi." access="readOnly" minEntries="0" maxEntries="1" >
+      <parameter base="WiFiStatsLogInterval" access="readWrite" notification="0" maxNotification="2" >
+        <syntax>
+          <unsignedInt/>
+        </syntax>
+      </parameter>
+    </object>
     <object base="Device." access="readOnly" minEntries="1" maxEntries="1" />
       <object base="Device.X_RDK_WebPA_Server." access="readOnly" minEntries="1" maxEntries="1" >
         <parameter base="URL" bsUpdate="allUpdate" access="readOnly" notification="0" maxNotification="2" >
@@ -4005,6 +4020,14 @@
         </syntax>
       </parameter>
     </object>
+    <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.SWDLDirect." access="readOnly" minEntries="1" maxEntries="1" addObjIdx="-1" delObjIdx="-1">
+      <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" rebootIdx="0" initIdx="1" getIdx="18000" setIdx="18001">
+        <syntax>
+          <boolean/>
+          <default type="factory" value="false"/>
+        </syntax>
+      </parameter>
+    </object>
     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.WarehouseHost." access="readOnly" minEntries="1" maxEntries="1" >
       <parameter base="CName1" access="readWrite" notification="0" maxNotification="2" >
         <syntax>
@@ -4111,7 +4134,157 @@
           <string/>
         </syntax>
       </parameter>
-    </object>
+      <parameter base="networkTimeout" access="readWrite" notification="0" maxNotification="2" >
+        <syntax>
+          <unsignedLong/>
+        </syntax>
+      </parameter>
+      <parameter base="manifestTimeout" access="readWrite" notification="0" maxNotification="2" >
+        <syntax>
+          <unsignedLong/>
+        </syntax>
+      </parameter>
+      <parameter base="playlistTimeout" access="readWrite" notification="0" maxNotification="2" >
+        <syntax>
+          <unsignedLong/>
+        </syntax>
+      </parameter>
+      <parameter base="defaultBitrate" access="readWrite" notification="0" maxNotification="2" >
+        <syntax>
+          <unsignedLong/>
+        </syntax>
+      </parameter>
+      <parameter base="defaultBitrate4K" access="readWrite" notification="0" maxNotification="2" >
+        <syntax>
+          <unsignedLong/>
+        </syntax>
+      </parameter>
+      <parameter base="client-dai" access="readWrite" notification="0" maxNotification="2" >
+        <syntax>
+          <boolean/>
+        </syntax>
+      </parameter>
+      <parameter base="minBitrate" access="readWrite" notification="0" maxNotification="2" >
+        <syntax>
+          <unsignedLong/>
+        </syntax>
+      </parameter>
+      <parameter base="maxBitrate" access="readWrite" notification="0" maxNotification="2" >
+        <syntax>
+          <unsignedLong/>
+        </syntax>
+      </parameter>
+      <parameter base="asyncTune" access="readWrite" notification="0" maxNotification="2" >
+        <syntax>
+          <boolean/>
+        </syntax>
+      </parameter>
+      <parameter base="enableCMCD" access="readWrite" notification="0" maxNotification="2" >
+        <syntax>
+          <boolean/>
+        </syntax>
+      </parameter>
+      <parameter base="SlowMotion" access="readWrite" notification="0" maxNotification="2" >
+        <syntax>
+          <boolean/>
+        </syntax>
+      </parameter>
+      <parameter base="curlStore" access="readWrite" notification="0" maxNotification="2" >
+        <syntax>
+          <boolean/>
+        </syntax>
+      </parameter>
+      <parameter base="enableLowLatencyDash" access="readWrite" notification="0" maxNotification="2"  >
+        <syntax>
+          <boolean/>
+        </syntax>
+      </parameter>
+      <parameter base="sharedSSL" access="readWrite" notification="0" maxNotification="2"  >
+        <syntax>
+          <boolean/>
+        </syntax>
+      </parameter>
+      <parameter base="enableVideoEndEvent" access="readWrite" notification="0" maxNotification="2" >
+        <syntax>
+          <boolean/>
+        </syntax>
+      </parameter>
+      <parameter base="disableEC3" access="readWrite" notification="0" maxNotification="2"  >
+        <syntax>
+          <boolean/>
+        </syntax>
+      </parameter>
+      <parameter base="disableATMOS" access="readWrite" notification="0" maxNotification="2"  >
+        <syntax>
+          <boolean/>
+        </syntax>
+      </parameter>
+      <parameter base="disableAC4" access="readWrite" notification="0" maxNotification="2"  >
+        <syntax>
+          <boolean/>
+        </syntax>
+      </parameter>
+      <parameter base="stereoOnly" access="readWrite" notification="0" maxNotification="2"  >
+        <syntax>
+          <boolean/>
+        </syntax>
+      </parameter>
+      <parameter base="disableAC3" access="readWrite" notification="0" maxNotification="2"  >
+        <syntax>
+          <boolean/>
+        </syntax>
+      </parameter>
+      <parameter base="cdvrLiveOffset" access="readWrite" notification="0" maxNotification="2"  >
+        <syntax>
+          <unsignedLong/>
+        </syntax>
+      </parameter>
+      <parameter base="liveOffset" access="readWrite" notification="0" maxNotification="2"  >
+        <syntax>
+          <unsignedLong/>
+        </syntax>
+      </parameter>
+      <parameter base="preferredDrm" access="readWrite" notification="0" maxNotification="2" >
+        <syntax>
+          <int/>
+        </syntax>
+      </parameter>
+      <parameter base="useWesterosSink" access="readWrite" notification="0" maxNotification="2"  >
+        <syntax>
+          <boolean/>
+        </syntax>
+      </parameter>
+      <parameter base="tsbInterruptHandling" access="readWrite" notification="0" maxNotification="2"  >
+        <syntax>
+          <boolean/>
+        </syntax>
+      </parameter>
+      <parameter base="useSecManager" access="readWrite" notification="0" maxNotification="2"  >
+        <syntax>
+          <boolean/>
+        </syntax>
+      </parameter>
+      <parameter base="maxInitFragCachePerTrack" access="readWrite" notification="0" maxNotification="2"  >
+        <syntax>
+          <int/>
+        </syntax>
+      </parameter>
+      <parameter base="supportTLS" access="readWrite" notification="0" maxNotification="2"  >
+        <syntax>
+          <unsignedLong/>
+        </syntax>
+      </parameter>
+      <parameter base="persistBitrateOverSeek" access="readWrite" notification="0" maxNotification="2"  >
+        <syntax>
+          <boolean/>
+        </syntax>
+      </parameter>
+      <parameter base="info" access="readWrite" notification="0" maxNotification="2" >
+        <syntax>
+          <boolean/>
+        </syntax>
+      </parameter>
+     </object>
      <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.JSPPCache." access="readOnly" minEntries="0" maxEntries="1" >
        <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
          <syntax>
@@ -4121,92 +4294,91 @@
       </object>
       <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.ThunderProxy." access="readOnly" minEntries="0" maxEntries="1" >
       <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>                                                                                                                          
+        <syntax>
            <boolean/>
-        </syntax>  
+        </syntax>
       </parameter>
      </object>
      <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.ThunderProxy.org." access="readOnly" minEntries="0" maxEntries="1" />
      <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.ThunderProxy.org.openrdk." access="readOnly" minEntries="0" maxEntries="1" />
      <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.ThunderProxy.org.openrdk.DisplaySettings." access="readOnly" minEntries="0" maxEntries="1" >
       <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>                                                                                                                          
+        <syntax>
            <boolean/>
-        </syntax>  
+        </syntax>
       </parameter>
-     </object> 
+     </object>
      <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.ThunderProxy.org.openrdk.StoragemanagerService." access="readOnly" minEntries="0" maxEntries="1" >
       <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>                                                                                                                          
+        <syntax>
            <boolean/>
-        </syntax>  
+        </syntax>
       </parameter>
-     </object> 
-     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.ThunderProxy.com." access="readOnly" minEntries="0" maxEntries="1" />
+     </object>
      <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.ThunderProxy.org.rdk." access="readOnly" minEntries="0" maxEntries="1" />
      <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.ThunderProxy.org.rdk.DeviceDiagnostics_1." access="readOnly" minEntries="0" maxEntries="1" >
       <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>                                                                                                                          
+        <syntax>
            <boolean/>
-        </syntax>  
+        </syntax>
       </parameter>
-     </object> 
+     </object>
      <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.ThunderProxy.org.rdk.activityMonitor." access="readOnly" minEntries="0" maxEntries="1" >
       <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>                                                                                                                          
+        <syntax>
            <boolean/>
-        </syntax>  
+        </syntax>
       </parameter>
-     </object> 
+     </object>
      <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.ThunderProxy.org.rdk.proxies." access="readOnly" minEntries="0" maxEntries="1" >
       <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>                                                                                                                          
+        <syntax>
            <boolean/>
-        </syntax>  
+        </syntax>
       </parameter>
-     </object> 
+     </object>
      <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.ThunderProxy.org.rdk.LoggingPreferences." access="readOnly" minEntries="0" maxEntries="1" >
       <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>                                                                                                                          
+        <syntax>
            <boolean/>
-        </syntax>  
+        </syntax>
       </parameter>
-     </object> 
+     </object>
      <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.ThunderProxy.org.rdk.userpreferences." access="readOnly" minEntries="0" maxEntries="1" >
       <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>                                                                                                                          
+        <syntax>
            <boolean/>
-        </syntax>  
+        </syntax>
       </parameter>
-     </object> 
+     </object>
      <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.ThunderProxy.org.openrdk.videoApplicationEvents_1." access="readOnly" minEntries="0" maxEntries="1" >
       <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>                                                                                                                          
+        <syntax>
            <boolean/>
-        </syntax>  
+        </syntax>
       </parameter>
      </object>
       <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.ThunderProxy.org.rdk.ContinueWatchingService_1." access="readOnly" minEntries="0" maxEntries="1" >
       <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>                                                                                                                          
+        <syntax>
            <boolean/>
-        </syntax>  
+        </syntax>
       </parameter>
-     </object>     
+     </object>
      <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.ThunderProxy.WebSocketService." access="readOnly" minEntries="0" maxEntries="1" >
       <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>                                                                                                                          
+        <syntax>
            <boolean/>
-        </syntax>  
+        </syntax>
       </parameter>
-     </object>     
+     </object>
      <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.ThunderProxy.Warehouse." access="readOnly" minEntries="0" maxEntries="1" >
       <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>                                                                                                                          
+        <syntax>
            <boolean/>
-        </syntax>  
+        </syntax>
       </parameter>
-     </object>     
+     </object>
      <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.ThunderProxy.org.rdk.soundPlayer_1." access="readOnly" minEntries="0" maxEntries="1" >
       <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
         <syntax>
@@ -4214,6 +4386,7 @@
         </syntax>
       </parameter>
      </object>
+
      <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.NonRootSupport." access="readOnly" minEntries="0" maxEntries="1" >
      <parameter base="Blocklist" access="readWrite" notification="0" maxNotification="2" >
        <syntax>
@@ -4225,78 +4398,83 @@
           <string/>
        </syntax>
       </parameter>
-     </object>     
+     </object>
      <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.ThunderProxy.org.openrdk.ControlService." access="readOnly" minEntries="0" maxEntries="1" >
       <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>                                                                                                                          
+        <syntax>
            <boolean/>
-        </syntax>  
+        </syntax>
       </parameter>
      </object>
      <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.ThunderProxy.org.rdk.ping_1." access="readOnly" minEntries="0" maxEntries="1" >
       <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>                                                                                                                          
+        <syntax>
            <boolean/>
-        </syntax>  
+        </syntax>
       </parameter>
      </object>
      <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.ThunderProxy.org.rdk.linearSegmentedAdvertising_1." access="readOnly" minEntries="0" maxEntries="1" >
       <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>                                                                                                                          
+        <syntax>
            <boolean/>
-        </syntax>  
+        </syntax>
       </parameter>
      </object>
      <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.ThunderProxy.screenCaptureService." access="readOnly" minEntries="0" maxEntries="1" >
       <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>                                                                                                                          
+        <syntax>
            <boolean/>
-        </syntax>  
+        </syntax>
       </parameter>
      </object>
      <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.ThunderProxy.systemService." access="readOnly" minEntries="0" maxEntries="1" >
       <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>                                                                                                                          
+        <syntax>
            <boolean/>
-        </syntax>  
+        </syntax>
       </parameter>
      </object>
      <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.ThunderProxy.org.openrdk.RemoteActionMappingService." access="readOnly" minEntries="0" maxEntries="1" >
       <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>                                                                                                                          
+        <syntax>
            <boolean/>
-        </syntax>  
+        </syntax>
       </parameter>
      </object>
      <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.ThunderProxy.AVInput." access="readOnly" minEntries="0" maxEntries="1" >
       <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>                                                                                                                          
+        <syntax>
            <boolean/>
-        </syntax>  
+        </syntax>
       </parameter>
      </object>
      <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.ThunderProxy.org.openrdk.vrexmanagerservice." access="readOnly" minEntries="0" maxEntries="1" >
       <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>                                                                                                                          
+        <syntax>
            <boolean/>
-        </syntax>  
+        </syntax>
       </parameter>
      </object>
      <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.ThunderProxy.FrontPanelService." access="readOnly" minEntries="0" maxEntries="1" >
       <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>                                                                                                                          
+        <syntax>
            <boolean/>
-        </syntax>  
+        </syntax>
       </parameter>
      </object>
      <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.ThunderSecurity." access="readOnly" minEntries="0" maxEntries="1" >
       <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>                                                                                                                          
+        <syntax>
            <boolean/>
-        </syntax>  
+        </syntax>
       </parameter>
      </object>
      <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.xre-receiver." access="readOnly" minEntries="1" maxEntries="1" >
+       <parameter base="webBackend" access="readWrite" notification="0" maxNotification="2" >
+         <syntax>
+           <string/>
+         </syntax>
+       </parameter>
        <parameter base="customPKSServerAddress" access="readWrite" notification="0" maxNotification="2" >
          <syntax>
            <string/>
@@ -4832,6 +5010,20 @@
       </parameter>
     </object>
     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.Packager." access="readOnly" minEntries="0" maxEntries="1" >
+      <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
+        <syntax>
+          <boolean/>
+        </syntax>
+      </parameter>
+    </object>
+    <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.XUPNP." access="readOnly" minEntries="0" maxEntries="1" >
+      <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
+        <syntax>
+          <boolean/>
+        </syntax>
+      </parameter>
+    </object>
+    <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.systemd-analyze." access="readOnly" minEntries="0" maxEntries="1" >
       <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
         <syntax>
           <boolean/>
