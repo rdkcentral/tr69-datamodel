@@ -3316,8 +3316,8 @@
         </syntax>
       </parameter>
      </object>
-     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.BTR.GamePad." access="readOnly" minEntries="1" maxEntries="1" addObjIdx="0" delObjIdx="0">
-       <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" rebootIdx="0" initIdx="1" getIdx="18000" setIdx="18001">
+     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.BTR.GamePad." access="readOnly" minEntries="1" maxEntries="1">
+       <parameter base="Enable" access="readWrite" notification="0" maxNotification="2">
          <syntax>
            <boolean/>
            <default type="factory" value="false"/>
@@ -4238,8 +4238,8 @@
         </syntax>
       </parameter>
     </object>
-    <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.SWDLDirect." access="readOnly" minEntries="1" maxEntries="1" addObjIdx="-1" delObjIdx="-1">
-      <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" rebootIdx="0" initIdx="1" getIdx="18000" setIdx="18001">
+    <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.SWDLDirect." access="readOnly" minEntries="1" maxEntries="1">
+      <parameter base="Enable" access="readWrite" notification="0" maxNotification="2">
         <syntax>
           <boolean/>
           <default type="factory" value="false"/>
@@ -5234,8 +5234,8 @@
         </syntax>
       </parameter>
     </object>
-    <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.WiFiBeamformingDisabled." access="readOnly" minEntries="0" maxEntries="1" addObjIdx="0" delObjIdx="0">
-      <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" rebootIdx="0" initIdx="1" getIdx="18000" setIdx="18001">
+    <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.WiFiBeamformingDisabled." access="readOnly" minEntries="0" maxEntries="1" >
+      <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
         <syntax>
           <boolean/>
         </syntax>
