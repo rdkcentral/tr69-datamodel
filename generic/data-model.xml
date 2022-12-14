@@ -354,6 +354,14 @@
         </syntax>
        </parameter>
       </object>
+      <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.Dobby." access="readOnly" minEntries="0" maxEntries="1" />
+      <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.Dobby.Netflix." access="readOnly" minEntries="0" maxEntries="1" >
+        <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
+         <syntax>
+            <boolean/>
+         </syntax>
+        </parameter>
+       </object>
     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.EncryptCloudUpload." access="readOnly" minEntries="0" maxEntries="1" >
       <parameter base="Enable" access="writeOnly" notification="0" maxNotification="2" >
         <syntax>
@@ -583,6 +591,20 @@
           <string/>
         </syntax>
        </parameter>
+    </object>
+    <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.Dobby.WPE." access="readOnly" minEntries="0" maxEntries="1" >
+      <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
+        <syntax>
+          <boolean/>
+        </syntax>
+      </parameter>
+    </object>
+    <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.Dobby.Cobalt." access="readOnly" minEntries="0" maxEntries="1" >
+      <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
+        <syntax>
+          <boolean/>
+        </syntax>
+      </parameter>
     </object>
     <object base="Device.DeviceInfo.SupportedDataModel." access="readOnly" minEntries="1" maxEntries="unbounded"/>
     <object base="Device.DeviceInfo.SupportedDataModel.1." access="readOnly" minEntries="1" maxEntries="1" >
@@ -982,6 +1004,13 @@
       <parameter base="dramThreshold" access="writeOnly" notification="0" maxNotification="2" >
         <syntax>
           <unsignedInt/>
+        </syntax>
+      </parameter>
+    </object>
+    <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.hwHealthTestWAN." access="readOnly" minEntries="0" maxEntries="unbounded" >
+      <parameter base="WANTestEndPointURL" access="readWrite" notification="0" maxNotification="2" >
+        <syntax>
+          <string/>
         </syntax>
       </parameter>
     </object>
@@ -1962,6 +1991,12 @@
           <unsignedInt/>
         </syntax>
       </parameter>
+      <parameter base="AudioStandards" access="readOnly"  notification="0" maxNotification="2" >
+        <syntax>
+          <list/>
+          <string/>
+        </syntax>
+      </parameter>
     </object>
     <object base="Device.Services.STBService.1.Capabilities.VideoDecoder.X_RDKCENTRAL-COM_MPEGHPart2.ProfileLevel." access="readOnly"  minEntries="1" maxEntries="unbounded" />
     <object base="Device.Services.STBService.1.Capabilities.VideoDecoder.X_RDKCENTRAL-COM_MPEGHPart2.ProfileLevel.1." access="readOnly" numEntriesParameter="ProfileLevelNumberOfEntries" minEntries="0" maxEntries="unbounded" >
@@ -2240,6 +2275,60 @@
         <syntax> <string/> </syntax>
       </parameter>
     </object>
+    <object base="Device.Services.STBService.1.Components.X_RDKCENTRAL-COM_SDCard." access="readOnly" minEntries="1" maxEntries="unbounded">
+      <parameter base="Capacity" access="readOnly" notification="0" maxNotification="2" >
+        <syntax>
+          <unsignedInt/>
+        </syntax>
+      </parameter>
+      <parameter base="CardFailed" access="readOnly" notification="0" maxNotification="2" >
+        <syntax>
+          <boolean/>
+        </syntax>
+      </parameter>
+      <parameter base="LifeElapsed" access="readOnly" notification="0" maxNotification="2" >
+        <syntax>
+          <int/>
+        </syntax>
+      </parameter>
+      <parameter base="LotID" access="readOnly" notification="0" maxNotification="2" >
+        <syntax>
+          <string/>
+        </syntax>
+      </parameter>
+      <parameter base="Manufacturer" access="readOnly" notification="0" maxNotification="2" >
+        <syntax>
+          <string/>
+        </syntax>
+      </parameter>
+      <parameter base="Model" access="readOnly" notification="0" maxNotification="2" >
+        <syntax>
+          <string/>
+        </syntax>
+      </parameter>
+      <parameter base="ReadOnly" access="readOnly" notification="0" maxNotification="2" >
+        <syntax>
+          <boolean/>
+        </syntax>
+      </parameter>
+      <parameter base="SerialNumber" access="readOnly" notification="0" maxNotification="2" >
+        <syntax>
+          <int/>
+        </syntax>
+      </parameter>
+      <parameter base="TSBQualified" access="readOnly" notification="0" maxNotification="2" >
+        <syntax>
+          <boolean/>
+        </syntax>
+      </parameter>
+      <parameter base="Status" access="readOnly" notification="0" maxNotification="2" >
+        <syntax>
+          <string/>
+        </syntax>
+      </parameter>
+    </object>
+
+
     <object base="Device.Services.STBService.1.Components.X_RDKCENTRAL-COM_RF4CE." access="readOnly" minEntries="1" maxEntries="unbounded">
       <parameter base="rf4ceVersionInfo" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
@@ -3227,8 +3316,8 @@
         </syntax>
       </parameter>
      </object>
-     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.BTR.GamePad." access="readOnly" minEntries="1" maxEntries="1" addObjIdx="0" delObjIdx="0">
-       <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" rebootIdx="0" initIdx="1" getIdx="18000" setIdx="18001">
+     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.BTR.GamePad." access="readOnly" minEntries="1" maxEntries="1">
+       <parameter base="Enable" access="readWrite" notification="0" maxNotification="2">
          <syntax>
            <boolean/>
            <default type="factory" value="false"/>
@@ -3303,6 +3392,119 @@
           <boolean/>
         </syntax>
       </parameter>
+    </object>
+    <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.Firebolt." access="readOnly" minEntries="0" maxEntries="1" >
+      <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
+        <syntax>
+           <boolean/>
+        </syntax>
+      </parameter>
+    </object>
+    <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.TvSettings." access="readOnly" minEntries="1" maxEntries="1" >
+      <parameter base="Boost" access="readWrite" notification="0" maxNotification="2" >
+        <syntax>
+          <int/>
+        </syntax>
+      </parameter>
+      <parameter base="PictureMode" access="readWrite" notification="0" maxNotification="2" >
+        <syntax>
+          <int/>
+        </syntax>
+      </parameter>
+      <parameter base="Backlight" access="readWrite" notification="0" maxNotification="2" >
+        <syntax>
+          <int/>
+        </syntax>
+      </parameter>
+      <parameter base="AutoBacklightMode" access="readWrite" notification="0" maxNotification="2" >
+        <syntax>
+          <string/>
+        </syntax>
+      </parameter>
+      <parameter base="DolbyVisionMode" access="readWrite" notification="0" maxNotification="2" >
+        <syntax>
+          <string/>
+        </syntax>
+      </parameter>
+      <parameter base="PictureModeString" access="readWrite" notification="0" maxNotification="2" >
+        <syntax>
+          <string/>
+        </syntax>
+      </parameter>
+      <parameter base="DynamicContrastModeString" access="readWrite" notification="0" maxNotification="2" >
+        <syntax>
+          <string/>
+        </syntax>
+      </parameter>
+      <parameter base="Brightness" access="readWrite" notification="0" maxNotification="2" >
+        <syntax>
+          <int/>
+        </syntax>
+      </parameter>
+      <parameter base="Contrast" access="readWrite" notification="0" maxNotification="2" >
+        <syntax>
+          <int/>
+        </syntax>
+      </parameter>
+      <parameter base="Saturation" access="readWrite" notification="0" maxNotification="2" >
+        <syntax>
+          <int/>
+        </syntax>
+      </parameter>
+      <parameter base="Sharpness" access="readWrite" notification="0" maxNotification="2" >
+        <syntax>
+          <int/>
+        </syntax>
+      </parameter>
+      <parameter base="Hue" access="readWrite" notification="0" maxNotification="2" >
+        <syntax>
+          <int/>
+        </syntax>
+      </parameter>
+      <parameter base="ColorTemperature" access="readWrite" notification="0" maxNotification="2" >
+        <syntax>
+          <string/>
+        </syntax>
+      </parameter>
+      <parameter base="AspectRatio" access="readWrite" notification="0" maxNotification="2" >
+        <syntax>
+          <string/>
+        </syntax>
+      </parameter>
+    </object>
+    <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.DisplaySettings." access="readOnly" minEntries="1" maxEntries="1"/>
+    <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.DisplaySettings.AudioPort." access="readOnly" minEntries="1" maxEntries="1"/>
+    <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.DisplaySettings.AudioPort.HDMI." access="readOnly"  minEntries="0" maxEntries="1" >
+       <parameter base="Enabled" access="readWrite" notification="0" maxNotification="2" >
+         <syntax>
+           <boolean/>
+           <default type="factory" value="false"/>
+         </syntax>
+       </parameter>
+    </object>
+    <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.DisplaySettings.AudioPort.SPDIF." access="readOnly"  minEntries="0" maxEntries="1" >
+       <parameter base="Enabled" access="readWrite" notification="0" maxNotification="2" >
+         <syntax>
+           <boolean/>
+           <default type="factory" value="false"/>
+         </syntax>
+       </parameter>
+    </object>
+    <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.DisplaySettings.AudioPort.SPEAKER." access="readOnly"  minEntries="0" maxEntries="1" >
+       <parameter base="Enabled" access="readWrite" notification="0" maxNotification="2" >
+         <syntax>
+           <boolean/>
+           <default type="factory" value="true"/>
+         </syntax>
+       </parameter>
+    </object>
+    <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.DisplaySettings.AudioPort.HDMI_ARC." access="readOnly"  minEntries="0" maxEntries="1" >
+       <parameter base="Enabled" access="readWrite" notification="0" maxNotification="2" >
+         <syntax>
+           <boolean/>
+           <default type="factory" value="false"/>
+         </syntax>
+       </parameter>
     </object>
     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.Network." access="readOnly" minEntries="1" maxEntries="1"/>
     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.Network.AllowDisableDefaultNetwork." access="readOnly" minEntries="0" maxEntries="1" >
@@ -3379,6 +3581,22 @@
         </syntax>
       </parameter>
      </object>
+     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.VideoTelemetry." access="readOnly" minEntries="1" maxEntries="1" >
+      <parameter base="FrequncyMinutes" access="readWrite" notification="0" maxNotification="2" >
+        <syntax>
+          <unsignedInt/>
+           <default type="factory" value="15"/>
+        </syntax>
+      </parameter>
+   </object>
+    <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.StopMaintenance." access="readOnly"  minEntries="0" maxEntries="1" >
+      <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
+        <syntax>
+          <boolean/>
+          <default type="factory" value="true"/>
+        </syntax>
+      </parameter>
+   </object>
     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.WiFi." access="readOnly" minEntries="0" maxEntries="1" >
       <parameter base="WiFiStatsLogInterval" access="readWrite" notification="0" maxNotification="2" >
         <syntax>
@@ -4020,8 +4238,8 @@
         </syntax>
       </parameter>
     </object>
-    <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.SWDLDirect." access="readOnly" minEntries="1" maxEntries="1" addObjIdx="-1" delObjIdx="-1">
-      <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" rebootIdx="0" initIdx="1" getIdx="18000" setIdx="18001">
+    <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.SWDLDirect." access="readOnly" minEntries="1" maxEntries="1">
+      <parameter base="Enable" access="readWrite" notification="0" maxNotification="2">
         <syntax>
           <boolean/>
           <default type="factory" value="false"/>
@@ -5010,6 +5228,13 @@
       </parameter>
     </object>
     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.Packager." access="readOnly" minEntries="0" maxEntries="1" >
+      <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
+        <syntax>
+          <boolean/>
+        </syntax>
+      </parameter>
+    </object>
+    <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.WiFiBeamformingDisabled." access="readOnly" minEntries="0" maxEntries="1" >
       <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
         <syntax>
           <boolean/>
