@@ -363,23 +363,30 @@
            <boolean/>
         </syntax>
       </parameter>
-     </object>
-     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.LXC." access="readOnly" minEntries="0" maxEntries="1" />
-     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.LXC.Netflix." access="readOnly" minEntries="0" maxEntries="1" >
+    </object>
+    <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.LXC." access="readOnly" minEntries="0" maxEntries="1" />
+    <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.LXC.Netflix." access="readOnly" minEntries="0" maxEntries="1" >
        <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
         <syntax>
            <boolean/>
         </syntax>
        </parameter>
-      </object>
-      <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.Dobby." access="readOnly" minEntries="0" maxEntries="1" />
-      <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.Dobby.Netflix." access="readOnly" minEntries="0" maxEntries="1" >
+    </object>
+    <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.Dobby." access="readOnly" minEntries="0" maxEntries="1" />
+    <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.Dobby.Netflix." access="readOnly" minEntries="0" maxEntries="1" >
         <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
          <syntax>
             <boolean/>
          </syntax>
         </parameter>
-       </object>
+    </object>
+    <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.Dobby.Amazon." access="readOnly" minEntries="0" maxEntries="1" >
+        <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
+          <syntax>
+            <boolean/>
+          </syntax>
+       </parameter>
+    </object>
     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.EncryptCloudUpload." access="readOnly" minEntries="0" maxEntries="1" >
       <parameter base="Enable" access="writeOnly" notification="0" maxNotification="2" >
         <syntax>
@@ -3403,6 +3410,16 @@
           <boolean/>
         </syntax>
       </parameter>
+     <parameter base="Blocklist" access="readWrite" notification="0" maxNotification="2" >
+       <syntax>
+          <string/>
+       </syntax>
+      </parameter>
+     <parameter base="ApparmorBlocklist" access="readWrite" notification="0" maxNotification="2" >
+       <syntax>
+          <string/>
+       </syntax>
+      </parameter>
     </object>
     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.PreferredNetworkInterface." access="readOnly" minEntries="0" maxEntries="1" >
       <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
@@ -4620,19 +4637,6 @@
         <syntax>
            <boolean/>
         </syntax>
-      </parameter>
-     </object>
-
-     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.NonRootSupport." access="readOnly" minEntries="0" maxEntries="1" >
-     <parameter base="Blocklist" access="readWrite" notification="0" maxNotification="2" >
-       <syntax>
-          <string/>
-       </syntax>
-      </parameter>
-     <parameter base="ApparmorBlocklist" access="readWrite" notification="0" maxNotification="2" >
-       <syntax>
-          <string/>
-       </syntax>
       </parameter>
      </object>
      <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.ThunderProxy.org.openrdk.ControlService." access="readOnly" minEntries="0" maxEntries="1" >
