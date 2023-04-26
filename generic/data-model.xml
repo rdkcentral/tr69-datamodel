@@ -514,7 +514,7 @@
         </parameter>
     </object>
     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.HDMICECDaemon." minEntries="0" maxEntries="1" >
-        <parameter base="Enable" bsUpdate="allUpdate" access="readWrite" notification="0" maxNotification="2" >
+        <parameter base="Enable"  access="readWrite" notification="0" maxNotification="2" >
             <syntax>
                 <boolean/>
             </syntax>
@@ -3641,42 +3641,42 @@
     </object>
     <object base="Device." access="readOnly" minEntries="1" maxEntries="1" />
       <object base="Device.X_RDK_WebPA_Server." access="readOnly" minEntries="1" maxEntries="1" >
-        <parameter base="URL" bsUpdate="allUpdate" access="readOnly" notification="0" maxNotification="2" >
+        <parameter base="URL"  access="readOnly" notification="0" maxNotification="2" >
           <syntax> <string/> </syntax>
          </parameter>
       </object>
       <object base="Device.X_RDK_WebPA_TokenServer." access="readOnly" minEntries="1" maxEntries="1" >
-        <parameter base="URL" bsUpdate="allUpdate" access="readOnly" notification="0" maxNotification="2" >
+        <parameter base="URL"  access="readOnly" notification="0" maxNotification="2" >
           <syntax> <string/> </syntax>
          </parameter>
       </object>
       <object base="Device.X_RDK_WebPA_DNSText." access="readOnly" minEntries="1" maxEntries="1" >
-        <parameter base="URL" bsUpdate="allUpdate" access="readWrite" notification="0" maxNotification="2" >
+        <parameter base="URL"  access="readWrite" notification="0" maxNotification="2" >
           <syntax> <string/> </syntax>
          </parameter>
       </object>
       <object base="Device.Time." access="readOnly" minEntries="1" maxEntries="1" >
-       <parameter base="NTPServer1" bsUpdate="allUpdate" access="readWrite" notification="0" maxNotification="2" >
+       <parameter base="NTPServer1"  access="readWrite" notification="0" maxNotification="2" >
         <syntax>
           <string/>
         </syntax>
       </parameter>
-      <parameter base="NTPServer2" bsUpdate="allUpdate" access="readWrite" notification="0" maxNotification="2" >
+      <parameter base="NTPServer2"  access="readWrite" notification="0" maxNotification="2" >
         <syntax>
           <string/>
         </syntax>
       </parameter>
-      <parameter base="NTPServer3" bsUpdate="allUpdate" access="readWrite" notification="0" maxNotification="2" >
+      <parameter base="NTPServer3"  access="readWrite" notification="0" maxNotification="2" >
         <syntax>
           <string/>
         </syntax>
       </parameter>
-      <parameter base="NTPServer4" bsUpdate="allUpdate" access="readWrite" notification="0" maxNotification="2" >
+      <parameter base="NTPServer4"  access="readWrite" notification="0" maxNotification="2" >
         <syntax>
           <string/>
         </syntax>
       </parameter>
-      <parameter base="NTPServer5" bsUpdate="allUpdate" access="readWrite" notification="0" maxNotification="2" >
+      <parameter base="NTPServer5"  access="readWrite" notification="0" maxNotification="2" >
         <syntax>
           <string/>
         </syntax>
@@ -3703,12 +3703,12 @@
       </parameter>
     </object>
     <object base="Device.X_RDKCENTRAL-COM_T2." access="readOnly" minEntries="1" maxEntries="1" >
-        <parameter base="ReportProfiles" bsUpdate="allUpdate" access="readWrite" notification="0" maxNotification="2" >
+        <parameter base="ReportProfiles"  access="readWrite" notification="0" maxNotification="2" >
         <syntax>
           <string/>
         </syntax>
       </parameter>
-      <parameter base="ReportProfilesMsgPack" bsUpdate="allUpdate" access="readWrite" notification="0" maxNotification="2" >
+      <parameter base="ReportProfilesMsgPack"  access="readWrite" notification="0" maxNotification="2" >
         <syntax>
           <string/>
         </syntax>
@@ -3736,22 +3736,22 @@
      </parameter>
     </object>
     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_Syndication." access="readOnly" minEntries="1" maxEntries="1" >
-      <parameter base="TR69ACSConnectURL_dev" bsUpdate="allUpdate" access="readWrite" notification="0" maxNotification="2" >
+      <parameter base="TR69ACSConnectURL_dev"  access="readWrite" notification="0" maxNotification="2" >
         <syntax>
           <string/>
         </syntax>
       </parameter>
-      <parameter base="TR69ACSConnectURL" bsUpdate="allUpdate" access="readWrite" notification="0" maxNotification="2" >
+      <parameter base="TR69ACSConnectURL"  access="readWrite" notification="0" maxNotification="2" >
         <syntax>
           <string/>
         </syntax>
       </parameter>
-      <parameter base="TR69CertLocation" bsUpdate="allUpdate" access="readWrite" notification="0" maxNotification="2" >
+      <parameter base="TR69CertLocation"  access="readWrite" notification="0" maxNotification="2" >
         <syntax>
           <string/>
         </syntax>
       </parameter>
-      <parameter base="TR69Key" bsUpdate="allUpdate" access="readWrite" notification="0" maxNotification="2" >
+      <parameter base="TR69Key"  access="readWrite" notification="0" maxNotification="2" >
         <syntax>
           <string/>
         </syntax>
@@ -3777,32 +3777,32 @@
       </parameter>
     </object>
     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Bootstrap." access="readOnly" minEntries="1" maxEntries="1" >
-      <parameter base="PartnerName" bsUpdate="allUpdate" access="readWrite" notification="0" maxNotification="2" >
+      <parameter base="PartnerName"  access="readWrite" notification="0" maxNotification="2" >
         <syntax>
           <string/>
         </syntax>
       </parameter>
-      <parameter base="PartnerProductName" bsUpdate="allUpdate" access="readWrite" notification="0" maxNotification="2" >
+      <parameter base="PartnerProductName"  access="readWrite" notification="0" maxNotification="2" >
         <syntax>
           <string/>
         </syntax>
       </parameter>
-      <parameter base="NetflixESNprefix" bsUpdate="allUpdate" access="readWrite" notification="0" maxNotification="2" >
+      <parameter base="NetflixESNprefix"  access="readWrite" notification="0" maxNotification="2" >
         <syntax>
           <string/>
         </syntax>
       </parameter>
-      <parameter base="SsrUrl" bsUpdate="allUpdate" access="readWrite" notification="0" maxNotification="2" >
+      <parameter base="SsrUrl"  access="readWrite" notification="0" maxNotification="2" >
         <syntax>
           <string/>
         </syntax>
       </parameter>
-      <parameter base="XconfUrl" bsUpdate="allUpdate" access="readWrite" notification="0" maxNotification="2" >
+      <parameter base="XconfUrl"  access="readWrite" notification="0" maxNotification="2" >
         <syntax>
           <string/>
         </syntax>
       </parameter>
-      <parameter base="XconfRecoveryUrl" bsUpdate="allUpdate" access="readWrite" notification="0" maxNotification="2" >
+      <parameter base="XconfRecoveryUrl"  access="readWrite" notification="0" maxNotification="2" >
         <syntax>
           <string/>
         </syntax>
@@ -3908,27 +3908,27 @@
       </parameter>
     </object>
     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.DNS64Proxy." access="readOnly" minEntries="1" maxEntries="1" >
-      <parameter base="Server1" bsUpdate="allUpdate" access="readWrite" notification="0" maxNotification="2" >
+      <parameter base="Server1"  access="readWrite" notification="0" maxNotification="2" >
         <syntax>
           <string/>
         </syntax>
       </parameter>
-      <parameter base="Server2" bsUpdate="allUpdate" access="readWrite" notification="0" maxNotification="2" >
+      <parameter base="Server2"  access="readWrite" notification="0" maxNotification="2" >
         <syntax>
           <string/>
         </syntax>
       </parameter>
-      <parameter base="Server3" bsUpdate="allUpdate" access="readWrite" notification="0" maxNotification="2" >
+      <parameter base="Server3"  access="readWrite" notification="0" maxNotification="2" >
         <syntax>
           <string/>
         </syntax>
       </parameter>
-      <parameter base="Server4" bsUpdate="allUpdate" access="readWrite" notification="0" maxNotification="2" >
+      <parameter base="Server4"  access="readWrite" notification="0" maxNotification="2" >
         <syntax>
           <string/>
         </syntax>
       </parameter>
-      <parameter base="Enable" bsUpdate="allUpdate" access="readWrite" notification="0" maxNotification="2" >
+      <parameter base="Enable"  access="readWrite" notification="0" maxNotification="2" >
         <syntax>
           <boolean/>
         </syntax>
@@ -4126,10 +4126,10 @@
       </parameter>
     </object>
     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Bootstrap.Control." access="readOnly" minEntries="1" maxEntries="1" >
-      <parameter base="ClearDB" bsUpdate="allUpdate" access="readWrite" notification="0" maxNotification="2" >
+      <parameter base="ClearDB"  access="readWrite" notification="0" maxNotification="2" >
         <syntax> <boolean/> </syntax>
       </parameter>
-      <parameter base="ClearDBEnd" bsUpdate="allUpdate" access="readWrite" notification="0" maxNotification="2" >
+      <parameter base="ClearDBEnd"  access="readWrite" notification="0" maxNotification="2" >
         <syntax> <boolean/> </syntax>
       </parameter>
     </object>
@@ -4142,7 +4142,7 @@
     </object>
     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.MTLS." access="readOnly" minEntries="1" maxEntries="1"/>
     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.MTLS.mTlsCrashdumpUpload." access="readOnly" minEntries="0" maxEntries="1" >
-     <parameter base="Enable" bsUpdate="allUpdate" access="readWrite" notification="0" maxNotification="2" >
+     <parameter base="Enable"  access="readWrite" notification="0" maxNotification="2" >
         <syntax>
           <boolean/>
         </syntax>
@@ -4170,32 +4170,32 @@
       </parameter>
     </object>
     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.LSA." access="readOnly" minEntries="1" maxEntries="1" >
-      <parameter base="Enable" bsUpdate="allUpdate" access="readWrite" notification="0" maxNotification="2" >
+      <parameter base="Enable"  access="readWrite" notification="0" maxNotification="2" >
         <syntax>
           <string/>
         </syntax>
       </parameter>
-      <parameter base="AdCacheEnable" bsUpdate="allUpdate" access="readWrite" notification="0" maxNotification="2" >
+      <parameter base="AdCacheEnable"  access="readWrite" notification="0" maxNotification="2" >
         <syntax>
           <string/>
         </syntax>
       </parameter>
-      <parameter base="ProgrammerEnable" bsUpdate="allUpdate" access="readWrite" notification="0" maxNotification="2" >
+      <parameter base="ProgrammerEnable"  access="readWrite" notification="0" maxNotification="2" >
         <syntax>
           <string/>
         </syntax>
       </parameter>
-      <parameter base="ByteRangeDownload" bsUpdate="allUpdate" access="readWrite" notification="0" maxNotification="2" >
+      <parameter base="ByteRangeDownload"  access="readWrite" notification="0" maxNotification="2" >
         <syntax>
           <string/>
         </syntax>
       </parameter>
-      <parameter base="PlacementReqUrl" bsUpdate="allUpdate" access="readWrite" notification="0" maxNotification="2" >
+      <parameter base="PlacementReqUrl"  access="readWrite" notification="0" maxNotification="2" >
         <syntax>
           <string/>
         </syntax>
       </parameter>
-      <parameter base="PSNUrl" bsUpdate="allUpdate" access="readWrite" notification="0" maxNotification="2" >
+      <parameter base="PSNUrl"  access="readWrite" notification="0" maxNotification="2" >
         <syntax>
           <string/>
         </syntax>
@@ -5005,27 +5005,27 @@
       </parameter>
     </object>
     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.XDial." minEntries="0" maxEntries="1" >
-       <parameter base="Enable" bsUpdate="allUpdate" access="readWrite" notification="0" maxNotification="2" >
+       <parameter base="Enable"  access="readWrite" notification="0" maxNotification="2" >
            <syntax>
                <boolean/>
            </syntax>
         </parameter>
-        <parameter base="FriendlyNameEnable" bsUpdate="allUpdate" access="readWrite" notification="0" maxNotification="2" >
+        <parameter base="FriendlyNameEnable"  access="readWrite" notification="0" maxNotification="2" >
             <syntax>
                 <boolean/>
             </syntax>
         </parameter>
-        <parameter base="WolWakeEnable" bsUpdate="allUpdate" access="readWrite" notification="0" maxNotification="2" >
+        <parameter base="WolWakeEnable"  access="readWrite" notification="0" maxNotification="2" >
             <syntax>
                 <boolean/>
             </syntax>
         </parameter>
-        <parameter base="AppList" bsUpdate="allUpdate" access="readWrite" notification="0" maxNotification="2" >
+        <parameter base="AppList"  access="readWrite" notification="0" maxNotification="2" >
             <syntax>
                 <string/>
             </syntax>
         </parameter>
-        <parameter base="DynamicAppList" bsUpdate="allUpdate" access="readWrite" notification="0" maxNotification="2" >
+        <parameter base="DynamicAppList"  access="readWrite" notification="0" maxNotification="2" >
             <syntax>
                 <boolean/>
             </syntax>
@@ -5228,7 +5228,7 @@
       </parameter>
     </object>
     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_Manufacturing." access="readOnly" minEntries="1" maxEntries="1" >
-      <parameter base="UIbranding" bsUpdate="allUpdate" access="readWrite" notification="0" maxNotification="2" >
+      <parameter base="UIbranding"  access="readWrite" notification="0" maxNotification="2" >
         <syntax>
           <string/>
         </syntax>
