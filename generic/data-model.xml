@@ -499,6 +499,13 @@
             </syntax>
         </parameter>
     </object>
+    <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.DAB." access="readOnly" minEntries="0" maxEntries="1" >
+        <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
+            <syntax>
+                <boolean/>
+            </syntax>
+        </parameter>
+    </object>
     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.UhdEnable." access="readOnly" minEntries="0" maxEntries="1" >
         <parameter base="Enable" access="writeOnly" notification="0" maxNotification="2" >
             <syntax>
