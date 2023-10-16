@@ -147,6 +147,41 @@
       <parameter base="X_RDKCENTRAL-COM_BootTime" access="readOnly" notification="0" maxNotification="2" >
         <syntax> <unsignedInt/> </syntax>
       </parameter>
+      <parameter base="X_COMCAST-COM_STB_MAC" access="readOnly" notification="0" maxNotification="2" >
+        <syntax>
+          <string/>
+        </syntax>
+      </parameter>
+      <parameter base="X_COMCAST-COM_STB_IP" access="readOnly" notification="0" maxNotification="2" >
+        <syntax>
+          <string/>
+        </syntax>
+      </parameter>
+      <parameter base="X_COMCAST-COM_FirmwareFilename" access="readOnly" notification="0" maxNotification="2" >
+        <syntax>
+          <string/>
+        </syntax>
+      </parameter>
+      <parameter base="X_COMCAST-COM_FirmwareToDownload" access="readOnly" notification="0" maxNotification="2" >
+        <syntax>
+          <string/>
+        </syntax>
+      </parameter>
+      <parameter base="X_COMCAST-COM_FirmwareDownloadStatus" access="readOnly" notification="0" maxNotification="2" >
+        <syntax>
+          <string/>
+        </syntax>
+      </parameter>
+       <parameter base="X_COMCAST-COM_Reset" access="readWrite" notification="0" maxNotification="2" >
+        <syntax>
+          <string/>
+        </syntax>
+      </parameter>
+      <parameter base="X_COMCAST-COM_PowerStatus" access="readOnly" notification="0" maxNotification="2" >
+        <syntax>
+          <string/>
+        </syntax>
+      </parameter>
     </object>
     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_xBlueTooth." access="readOnly" minEntries="1" maxEntries="1" >
       <parameter base="Enabled" access="readOnly" notification="0" maxNotification="2" >
@@ -503,6 +538,7 @@
         <parameter base="Enable" access="readWrite" notification="0" maxNotification="2" >
             <syntax>
                 <boolean/>
+		<default type="factory" value="false"/>
             </syntax>
         </parameter>
     </object>
@@ -841,165 +877,6 @@
         </syntax>
       </parameter>
     </object>
-    <object base="Device.ManagementServer." access="readOnly" minEntries="1" maxEntries="1" >
-      <parameter base="EnableCWMP" access="readWrite" notification="0" maxNotification="2" >
-	    <syntax>
-          <boolean/>
-        </syntax>
-      </parameter>
-      <parameter base="URL" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>
-        </syntax>
-      </parameter>
-      <parameter base="Username" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>
-        </syntax>
-      </parameter>
-      <parameter base="Password" access="writeOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>
-        </syntax>
-      </parameter>
-      <parameter base="PeriodicInformEnable" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>
-          <boolean/>
-          <default type="factory" value="0"/>
-        </syntax>
-      </parameter>
-      <parameter base="PeriodicInformInterval" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>
-          <unsignedInt/>
-          <default type="factory" value="300"/>
-        </syntax>
-      </parameter>
-      <parameter base="PeriodicInformTime" access="readWrite"  notification="0" maxNotification="2" >
-        <syntax>
-          <dateTime/>
-        </syntax>
-      </parameter>
-      <parameter base="ParameterKey" access="readOnly" notification="4" alwaysInclude="true" maxNotification="1" >
-        <syntax>
-          <string/>
-        </syntax>
-      </parameter>
-      <parameter base="ConnectionRequestURL" access="readOnly" notification="4" alwaysInclude="true" maxNotification="2" >
-        <syntax>
-        <string/>
-        </syntax>
-	  </parameter>
-      <parameter base="ConnectionRequestUsername" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>
-        </syntax>
-      </parameter>
-      <parameter base="ConnectionRequestPassword" access="writeOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>
-        </syntax>
-      </parameter>
-      <parameter base="UpgradesManaged" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>
-          <boolean/>
-          <default type="factory" value="0"/>
-        </syntax>
-      </parameter>
-      <parameter base="KickURL" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>
-        </syntax>
-      </parameter>
-      <parameter base="DownloadProgressURL" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>
-        </syntax>
-      </parameter>
-      <parameter base="DefaultActiveNotificationThrottle" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>
-          <unsignedInt/>
-          <default type="factory" value="600"/>
-        </syntax>
-      </parameter>
-      <parameter base="CWMPRetryMinimumWaitInterval" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>
-          <unsignedInt/>
-        </syntax>
-      </parameter>
-      <parameter base="CWMPRetryIntervalMultiplier" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>
-          <unsignedInt/>
-        </syntax>
-      </parameter>
-      <parameter base="UDPConnectionRequestAddress" access="readOnly" notification="0" maxNotification="3" >
-        <syntax>
-          <string/>
-        </syntax>
-      </parameter>
-      <parameter base="STUNEnable" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>
-          <boolean/>
-          <default type="factory" value="1"/>
-        </syntax>
-      </parameter>
-      <parameter base="STUNServerAddress" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>
-        </syntax>
-      </parameter>
-      <parameter base="STUNServerPort" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>
-          <unsignedInt/>
-          <default type="factory" value="3478"/>
-        </syntax>
-      </parameter>
-      <parameter base="STUNUsername" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>
-        </syntax>
-      </parameter>
-      <parameter base="STUNPassword" access="readWrite" notification="0" maxNotification="1" >
-        <syntax>
-          <string/>
-        </syntax>
-      </parameter>
-      <parameter base="STUNMaximumKeepAlivePeriod" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>
-          <int/>
-          <default type="factory" value="80"/>
-        </syntax>
-      </parameter>
-      <parameter base="STUNMinimumKeepAlivePeriod" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>
-          <unsignedInt/>
-          <default type="factory" value="30"/>
-        </syntax>
-      </parameter>
-      <parameter base="NATDetected" access="readOnly" notification="0" maxNotification="2" >
-        <syntax>
-          <boolean/>
-          <default type="factory" value="0"/>
-        </syntax>
-      </parameter>
-      <parameter base="AliasBasedAddressing" access="readOnly" notification="4" alwaysInclude="true" maxNotification="3" >
-        <syntax>
-          <boolean/>
-          <default type="factory" value="1"/>
-        </syntax>
-      </parameter>
-      <parameter base="InstanceMode" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>
-          <string/>
-          <default type="factory" value="InstanceNumber"/>
-        </syntax>
-      </parameter>
-      <parameter base="AutoCreateInstances" access="readWrite" notification="0" maxNotification="2" >
-        <syntax>
-          <boolean/>
-          <default type="factory" value="0"/>
-        </syntax>
-      </parameter>
-	</object>
     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_xOpsDeviceMgmt.hwHealthTest." access="readOnly" minEntries="0" maxEntries="unbounded" >
       <parameter base="ExecuteTest" access="writeOnly" notification="0" maxNotification="2" >
         <syntax>
