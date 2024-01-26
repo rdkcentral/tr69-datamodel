@@ -5170,7 +5170,7 @@
       </parameter>
     </object>
     <object base="Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.SystemServices." access="readOnly" minEntries="1" maxEntries="1" >
-      <parameter base="FriendlyName" bsUpdate="allUpdate" access="readWrite" notification="0" maxNotification="2" >
+      <parameter base="FriendlyName" access="readWrite" notification="0" maxNotification="2" >
         <syntax>
           <string/>
         </syntax>
