@@ -43,6 +43,11 @@
           <string/>
         </syntax>
       </parameter>
+      <parameter base="DeviceId" access="readOnly" notification="0" maxNotification="2" >
+        <syntax>
+          <string/>
+        </syntax>
+      </parameter>
       <parameter base="Description" access="readOnly" notification="0" maxNotification="2" >
         <syntax>
           <string/>
@@ -3593,6 +3598,13 @@
         </syntax>
       </parameter>
       <parameter base="ReportProfilesMsgPack"  access="readWrite" notification="0" maxNotification="2" >
+        <syntax>
+          <string/>
+        </syntax>
+      </parameter>
+    </object>
+    <object base="Device.X_RDKCENTRAL-COM_AdobeAnalytics." access="readOnly" minEntries="1" maxEntries="1" >
+      <parameter base="MediaSessionId"  access="readWrite" notification="0" maxNotification="2" >
         <syntax>
           <string/>
         </syntax>
